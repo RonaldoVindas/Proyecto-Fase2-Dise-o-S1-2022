@@ -1,0 +1,9 @@
+/*==================       Diseño de Software ========================*/
+
+-S1-2022
+-Integrantes:
+	-Álvaro Moreira V.
+	-Ronaldo Vindas B.
+
+-> Enlace a Github:
+	https://github.com/RonaldoVindas/Proyecto-Fase2-Dise-o-S1-2022

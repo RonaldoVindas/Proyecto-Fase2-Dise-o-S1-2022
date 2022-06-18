@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reserva de Espacio</title>
+</head>
+
+<style>
+body{
+    margin-top:20px; 
+}
+.bg-light-gray {
+    background-color: #f7f7f7;
+    
+}
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+    
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+    
+}
+
+
+.bg-sky.box-shadow {
+    box-shadow: 0px 5px 0px 0px #00a2a7
+}
+
+.bg-orange.box-shadow {
+    box-shadow: 0px 5px 0px 0px #af4305
+}
+
+.bg-green.box-shadow {
+    box-shadow: 0px 5px 0px 0px #4ca520
+}
+
+.bg-yellow.box-shadow {
+    box-shadow: 0px 5px 0px 0px #dcbf02
+}
+
+.bg-pink.box-shadow {
+    box-shadow: 0px 5px 0px 0px #e82d8b
+}
+
+.bg-purple.box-shadow {
+    box-shadow: 0px 5px 0px 0px #8343e8
+}
+
+.bg-lightred.box-shadow {
+    box-shadow: 0px 5px 0px 0px #d84213
+}
+
+.bg-green {
+    background-color: #5bbd2a
+}
+
+.bg-yellow {
+    background-color: #f0d001
+}
+
+.bg-lightred {
+    background-color: #ff5722
+}
+
+.bg-blue {
+    background-color: #4871e0;
+    color: white
+}
+
+.padding-15px-lr {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padding-5px-tb {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.margin-10px-bottom {
+    margin-bottom: 10px;
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.margin-10px-top {
+    margin-top: 10px;
+}
+.font-size14 {
+    font-size: 14px;
+}
+
+.text-light-gray {
+    color: #d6d5d5;
+}
+.font-size13 {
+    font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+    
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.encabezado{
+    color: rgb(0, 0, 0);
+    text-align: start;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 750px;
+}
+
+
+</style>
+
+<body>
+    <div>
+        <header >
+            <h1 class = "encabezado">      Seleccione un espacio de reserva:    </h1>
+        </header>
+    </div>
+
+   
+    <div class="container">
+        <div class="timetable-img text-center">
+            <img src="img/content/timetable.png" alt="">
+        </div>
+
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center" style="border:1px solid black; margin-left:auto; margin-right:auto; margin-top: 150px">
+                <thead>
+                    <tr class="bg-blue">
+                        <th class="text-uppercase">Hora
+                        </th>
+                        <th class="text-uppercase">Lunes</th>
+                        <th class="text-uppercase">Martes</th>
+                        <th class="text-uppercase">Miércoles</th>
+                        <th class="text-uppercase">Jueves</th>
+                        <th class="text-uppercase">Viernes</th>
+                        <th class="text-uppercase">Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form action="/horarios/:id/button" method="POST" enctype="application/x-www-form-urlencoded" style="width: 314px;">
+                    <input type="hidden" name="id" value="<%= id%>">
+
+                    <tr>
+                        <td class="align-middle">09:00am</td>
+                        <td>
+                         
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-9-10"  type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            
+                        </td>
+                        <td>
+                           <button  onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-9-10" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar</button> 
+                        </td>
+
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name ="reserve_button" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" value = "Miercoles-9-10"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-9-10" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-9-10" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-9-10" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">10:00am</td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-10-11" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">11:00am</td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-11-12" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">12:00pm</td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-12-13" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">01:00pm</td>
+                        <td>
+                            <!-- <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Sin espacios</span> -->
+                        
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+                        <td>
+                            <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-13-14" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                        </td>
+
+                        <tr>
+                            <td class="align-middle">2:00pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-14-15" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="align-middle">3:00pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-15-16" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="align-middle">4:00Pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-16-17" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="align-middle">5:00Pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="MArtes-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-17-18" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="align-middle">6:00Pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-18-19" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td class="align-middle">7:00Pm</td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Lunes-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Martes-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Miercoles-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Jueves-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Viernes-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                            <td>
+                                <button onclick = "alert('Espacio Reservado') " name="reserve_button" value="Sabado-19-20" type="submit" class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13"> Reservar </button> 
+                            </td>
+                        </tr>
+                    </tr>
+                </tbody>
+                </form>
+            </table>
+        </div>
+    </div>   
+
+</body>
+</html>
