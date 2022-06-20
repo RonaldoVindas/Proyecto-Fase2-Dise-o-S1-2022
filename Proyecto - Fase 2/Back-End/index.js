@@ -37,21 +37,24 @@ router.get('/parqueos', async (req, res)=> {
     //Simula patrón Chain of Responsability
     if(user_type == 1){
         var parking_lots = await mysqldb.getAllParkings();
-        res.render('parqueos', { parking_lots: parking_lots });
+        res.render('parqueos', { parking_lots: parking_lots,numero: 1 });
     }
 
     else if(user_type == 2){
-        var parking_lots = await mysqldb.getAllParkingsLeadership();
-        res.render('parqueos', { parking_lots: parking_lots });
+        var parking_lots = await mysqldb.getAllParkingsLeadership();      
+       
+        res.render('parqueos', { parking_lots: parking_lots, numero: 2});
+
+
     }
 
     else if(user_type == 3){
         var parking_lots = await mysqldb.getAllParkingsDisable();
-        res.render('parqueos', { parking_lots: parking_lots });
+        res.render('parqueos', { parking_lots: parking_lots, numero: 3 });
     }
     
     else if(user_type == 4){
-
+        //Código operador de parqueo....
     }
 
 });
@@ -74,13 +77,15 @@ router.post('/horarios/:id/button', async (req, res)=> {
     const user_id = await mysqldb.getUserIdbyEmail(email)
     const parking_id = req.body.id
     await mysqldb.insertUserReserveParking(user_id, parseInt(parking_id), "Reserva Parqueo", buttonText[0], parseInt(buttonText[1]),parseInt(buttonText[2]))
-    res.redirect('/button');
+    res.redirect('/parqueos');
 });
 
 
-router.get('/button', async (req, res)=> {
-    res.send('hola');
+router.get('/stats', async (req, res)=> {
+    res.render('estadisticas');
+
 });
+
 
 
 

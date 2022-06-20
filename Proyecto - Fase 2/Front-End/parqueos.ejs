@@ -136,6 +136,22 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     position: absolute;
     top: 10px;
     left: 1700px;
+    border-radius: 12px
+}
+
+
+
+.buttom-button{
+  color: #fff;
+  background:rgb(55, 24, 167);
+  text-align: start;
+  z-index: 1;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 12px
+
 }
 
 </style>
@@ -144,16 +160,18 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 
     <div>
         <header >
-            <h1 class = "encabezado">      Seleccione un parqueo para realizar la reserva:    </h1>
+            <h1 class = "encabezado">  Seleccione un parqueo para realizar la reserva:    </h1>
+            
         </header>
 
         <div>
-        <a class="btn-btn-red" href="/exit" role="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/OOjs_UI_icon_logOut-ltr-invert.svg/1024px-OOjs_UI_icon_logOut-ltr-invert.svg.png" width="25"  height="25"><p>Log Out</p></a>
+        <a class="btn-btn-red" href="/exit" role="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/OOjs_UI_icon_logOut-ltr-invert.svg/1024px-OOjs_UI_icon_logOut-ltr-invert.svg.png" width="25"  height="25"><p>Cerrar Sesión</p></a>
        </div>
     </div>
 
    
 <div>
+
     
     <div class="container">  
         <% parking_lots.forEach(function (park) { %> 
@@ -179,6 +197,16 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     </div>
 
 </div>
+
+   <div>
+    <% if(numero === 2){ %>
+      <a class="buttom-button" href="/stats" role="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Icon_Stats_color.svg/1024px-Icon_Stats_color.svg.png" width="25"  height="25"><p>Ver Estadísiticas</p></a>
+    <% } else{ %>
+    <% } %>
+    </div> 
+    
+
+
 
 
 </body>
